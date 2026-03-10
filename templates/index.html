@@ -1,1 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LensAura — See The World In Style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
 
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">👁️</span>
+                <span class="logo-text">Lens<span class="logo-accent">Aura</span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/category/mens">Men's</a></li>
+                <li><a href="/category/womens">Women's</a></li>
+                <li><a href="/category/kids">Kids</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" onclick="window.location.href='/cart'">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-eyebrow">✦ Premium Eyewear Collection 2025</p>
+                <h1 class="hero-title">
+                    See The World<br>
+                    <span class="gradient-text">In Pure Style</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Handcrafted frames for every face. Discover eyewear that defines your personality — from classic elegance to bold statements.
+                </p>
+                <div class="hero-btns">
+                    <a href="/category/mens" class="btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                    <a href="#categories" class="btn-secondary">Explore Collections</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">500+</span>
+                        <span class="stat-label">Styles</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">50K+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">4.9★</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-glass-card">
+                    <div class="glass-card-inner">
+                        <div class="glass-emoji-big">🕶️</div>
+                        <p class="glass-card-text">New Arrivals</p>
+                        <p class="glass-card-sub">Summer 2025</p>
+                    </div>
+                    <div class="floating-badge badge-1">UV Protection</div>
+                    <div class="floating-badge badge-2">Polarized</div>
+                    <div class="floating-badge badge-3">Lightweight</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE STRIP ===== -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>✦ FREE SHIPPING ON ORDERS ABOVE ₹999</span>
+            <span>✦ 100% UV PROTECTION GUARANTEED</span>
+            <span>✦ 30 DAY EASY RETURNS</span>
+            <span>✦ PREMIUM QUALITY FRAMES</span>
+            <span>✦ TRENDING STYLES 2025</span>
+            <span>✦ FREE SHIPPING ON ORDERS ABOVE ₹999</span>
+            <span>✦ 100% UV PROTECTION GUARANTEED</span>
+            <span>✦ 30 DAY EASY RETURNS</span>
+            <span>✦ PREMIUM QUALITY FRAMES</span>
+            <span>✦ TRENDING STYLES 2025</span>
+        </div>
+    </div>
+
+    <!-- ===== CATEGORIES SECTION ===== -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Shop By Category</p>
+                <h2 class="section-title">Find Your <span class="gradient-text">Perfect Pair</span></h2>
+                <p class="section-subtitle">Curated collections for every style and occasion</p>
+            </div>
+            <div class="category-grid">
+
+                <!-- MENS -->
+                <div class="category-card" onclick="window.location.href='/category/mens'">
+                    <div class="category-img-wrap">
+                        <div class="category-emoji">👨</div>
+                        <div class="category-overlay">
+                            <span>Explore Men's →</span>
+                        </div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Men's Collection</h3>
+                        <p>Bold. Sharp. Iconic.</p>
+                        <div class="category-tags">
+                            <span>Aviator</span>
+                            <span>Wayfarer</span>
+                            <span>Rectangular</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WOMENS -->
+                <div class="category-card featured" onclick="window.location.href='/category/womens'">
+                    <div class="category-img-wrap">
+                        <div class="category-emoji">👩</div>
+                        <div class="category-overlay">
+                            <span>Explore Women's →</span>
+                        </div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Women's Collection</h3>
+                        <p>Elegant. Trendy. Timeless.</p>
+                        <div class="category-tags">
+                            <span>Cat Eye</span>
+                            <span>Butterfly</span>
+                            <span>Oversized</span>
+                        </div>
+                    </div>
+                    <div class="featured-badge">Most Popular</div>
+                </div>
+
+                <!-- KIDS -->
+                <div class="category-card" onclick="window.location.href='/category/kids'">
+                    <div class="category-img-wrap">
+                        <div class="category-emoji">🧒</div>
+                        <div class="category-overlay">
+                            <span>Explore Kids' →</span>
+                        </div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Kids' Collection</h3>
+                        <p>Fun. Safe. Durable.</p>
+                        <div class="category-tags">
+                            <span>Round</span>
+                            <span>Sport</span>
+                            <span>Flexible</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED PRODUCTS ===== -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Hand Picked For You</p>
+                <h2 class="section-title">Trending <span class="gradient-text">This Week</span></h2>
+            </div>
+            <div class="products-grid" id="featuredProducts">
+                <!-- JS dynamically load pannum -->
+                <div class="loading-shimmer"></div>
+                <div class="loading-shimmer"></div>
+                <div class="loading-shimmer"></div>
+                <div class="loading-shimmer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY LENSAURA ===== -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Why Choose Us</p>
+                <h2 class="section-title">The <span class="gradient-text">LensAura</span> Promise</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>100% UV Protection</h3>
+                    <p>Every lens certified for complete UV400 protection. Your eyes are our priority.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Free Fast Delivery</h3>
+                    <p>Free shipping on orders above ₹999. Delivered in 3-5 business days.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">↩️</div>
+                    <h3>30 Day Returns</h3>
+                    <p>Not happy? Return within 30 days, no questions asked. Easy refund process.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>Premium Quality</h3>
+                    <p>Handcrafted frames using aircraft-grade materials. Built to last for years.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Customer Love</p>
+                <h2 class="section-title">What People <span class="gradient-text">Are Saying</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Absolutely love my new aviators from LensAura! Premium quality and super stylish. Worth every penny!"</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">R</div>
+                        <div>
+                            <strong>Rahul M.</strong>
+                            <span>Chennai</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card featured-review">
+                    <div class="stars">★★★★★</div>
+                    <p>"The cat eye glasses I ordered are gorgeous! Perfect fit, amazing packaging. Will definitely order again!"</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">P</div>
+                        <div>
+                            <strong>Priya S.</strong>
+                            <span>Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Bought for my son — he loves his SuperHero Shield glasses! Great quality for kids. Fast delivery too!"</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">A</div>
+                        <div>
+                            <strong>Anitha K.</strong>
+                            <span>Coimbatore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <span class="logo-icon">👁️</span>
+                        <span class="logo-text">Lens<span class="logo-accent">Aura</span></span>
+                    </div>
+                    <p>Premium eyewear for every personality. Style that speaks before you do.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/919999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="/category/mens">Men's Eyewear</a></li>
+                        <li><a href="/category/womens">Women's Eyewear</a></li>
+                        <li><a href="/category/kids">Kids' Eyewear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Exchange</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="https://wa.me/919999999999">WhatsApp Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fab fa-whatsapp"></i> +91 99999 99999</p>
+                    <p><i class="fas fa-envelope"></i> hello@lensaura.in</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Tamil Nadu, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 LensAura. All rights reserved. Made with ❤️ in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
