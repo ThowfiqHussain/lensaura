@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart — LensAura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/cart.css">
+</head>
+<body>
 
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" onclick="window.location.href='/'">
+                <span class="logo-icon">👁️</span>
+                <span class="logo-text">Lens<span class="logo-accent">Aura</span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/category/mens">Men's</a></li>
+                <li><a href="/category/womens">Women's</a></li>
+                <li><a href="/category/kids">Kids</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" onclick="window.location.href='/cart'">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== CART HERO ===== -->
+    <section class="cart-hero">
+        <div class="cart-hero-content">
+            <div class="cart-hero-icon">🛍️</div>
+            <h1>Your <span class="gradient-text">Cart</span></h1>
+            <p>Review your selected eyewear and place your order via WhatsApp!</p>
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Cart</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CART CONTENT ===== -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-layout">
+
+                <!-- Cart Items -->
+                <div class="cart-items-wrap">
+                    <div class="cart-items-header">
+                        <h2>Selected Items</h2>
+                        <button class="clear-cart-btn" onclick="clearCart()">
+                            <i class="fas fa-trash"></i> Clear All
+                        </button>
+                    </div>
+                    <div id="cartItems">
+                        <!-- JS load pannum -->
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="cart-summary-wrap" id="cartSummary" style="display:none">
+                    <div class="cart-summary">
+                        <h3>Order Summary</h3>
+
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotalEl">₹0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="shippingEl">₹99</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <span id="totalEl">₹0</span>
+                        </div>
+
+                        <div class="free-shipping-note">
+                            <i class="fas fa-truck"></i>
+                            Free shipping on orders above ₹999!
+                        </div>
+
+                        <!-- WhatsApp Order Button -->
+                        <button class="whatsapp-order-btn" onclick="orderViaWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                            Order via WhatsApp
+                        </button>
+
+                        <p class="order-note">
+                            <i class="fas fa-info-circle"></i>
+                            WhatsApp button click pannina — unga order details automatic ah send aagum!
+                        </p>
+
+                        <!-- Continue Shopping -->
+                        <a href="/" class="continue-shopping">
+                            <i class="fas fa-arrow-left"></i> Continue Shopping
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <span>🔒</span>
+                            <p>Secure Order</p>
+                        </div>
+                        <div class="trust-badge">
+                            <span>↩️</span>
+                            <p>Easy Returns</p>
+                        </div>
+                        <div class="trust-badge">
+                            <span>✅</span>
+                            <p>Genuine Products</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/919999999999?text=Hi%20LensAura!%20I%20need%20help"
+       target="_blank"
+       class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-tooltip">Need help?</span>
+    </a>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <span class="logo-icon">👁️</span>
+                        <span class="logo-text">Lens<span class="logo-accent">Aura</span></span>
+                    </div>
+                    <p>Premium eyewear for every personality. Style that speaks before you do.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/919999999999" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="/category/mens">Men's Eyewear</a></li>
+                        <li><a href="/category/womens">Women's Eyewear</a></li>
+                        <li><a href="/category/kids">Kids' Eyewear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Exchange</a></li>
+                        <li><a href="https://wa.me/919999999999">WhatsApp Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fab fa-whatsapp"></i> +91 99999 99999</p>
+                    <p><i class="fas fa-envelope"></i> hello@lensaura.in</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Tamil Nadu, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 LensAura. All rights reserved. Made with ❤️ in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
